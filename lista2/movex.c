@@ -13,7 +13,7 @@ void moveX(char *text) {
 }
 
 int main() {
-    char text[101];
+    char text[1001];
     scanf("%s", text);
     moveX(text);
     printf("\n");
