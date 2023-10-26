@@ -7,12 +7,12 @@ typedef struct celula
 	struct celula *prox;
 } celula;
 
-celula *busca_lista_posicao (celula *le, int x){
+celula *busca_lista_posicao(celula *le, int x) {
 	celula *elem = le;
-  for(elem=elem; elem->prox != NULL; elem = elem -> prox){
-    if(elem->prox->dado==x){
-      return elem;
-    }
+  	for(elem=elem; elem->prox != NULL; elem = elem -> prox) {
+		if(elem->prox->dado==x){
+			return elem;
+		}
   }
 	return elem;
 }
@@ -20,7 +20,7 @@ celula *busca_lista_posicao (celula *le, int x){
 void insere_antes (celula *le, int x, int y){
 	int i=0;
 	celula *elem;
-	celula *novo = malloc (sizeof (celula));
+	celula *novo = malloc(sizeof(celula));
 	//percorrendo a lista encadeada até chegar na posição desejada
 	elem = busca_lista_posicao(le, y);
 	novo -> dado = x;	
